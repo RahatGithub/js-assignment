@@ -3,11 +3,11 @@
 //******Problem no.1*******
 function kilometerToMeter(km) {
     if (km > 0) {
-        var m = km * 1000;
+        var m = km * 1000; //1 km = 100 m
         return m
     }
     else {
-        return 'Enter a valid input';
+        return 'Enter a valid input'; //only accepts positive integers
     }
 }
 
@@ -24,7 +24,7 @@ function budgetCalculator(watches, phones, laptops) {
         return totalCost;
     }
     else{
-        return 'Enter a valid input';
+        return 'Enter a valid input'; //negative value isn't accepted
     }
 }
 
@@ -33,6 +33,20 @@ budgetCalculator(watches, phones, laptops);
 
 
 
-
+//******Problem no.3*******
+function hotelCost(days){
+    if(days<=10 && days>0){
+        return days*100; //for first 10 days, per day cost is 100
+    }
+    else if(days>10 && days<=20){
+        return 100*10 + (days-10)*80; //total cost = cost of first 10 days + cost of between 10 days and 20 days 
+    }
+    else if(days>20){
+        return 100*10 + 80*10 + (days-20)*50; //total cost = cost of first 10 days + cost of second 10 days + cost after 20 days
+    }
+    else{
+        return 'Enter a valid input'; //only accepts positive integers
+    }
+}
 
 
