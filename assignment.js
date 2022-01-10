@@ -50,3 +50,19 @@ function hotelCost(days){
 }
 
 
+
+//******Problem no.4*******
+function megaFriend(friends){
+    var maxLen = friends[0].length, indexOfMax = 0; //set the initial values of first element's length and index
+    for(var i=1; i<friends.length; i++){
+        if(friends[i].length > maxLen){
+            maxLen = friends[i].length;
+            indexOfMax = i;
+        }
+    }
+    var bestFriend = friends[indexOfMax];
+    return bestFriend;
+}
+
+var friends = ['Saiful', 'Omor', 'Nafiz', 'Ashfak', 'Zubayer'];
+megaFriend(friends);
